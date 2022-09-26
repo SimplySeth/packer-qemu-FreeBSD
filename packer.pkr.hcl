@@ -7,7 +7,6 @@ source "qemu" "freebsd" {
   disk_size         = "${var.disk_size}"
   format            = "qcow2"
   headless          = true
-  #http_directory    = "/Users/sreinoso/QEMU/http"
   http_directory    = "http"
   http_port_max     = 8181
   http_port_min     = 8181
