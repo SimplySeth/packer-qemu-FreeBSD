@@ -10,8 +10,8 @@ source "qemu" "freebsd" {
   http_directory    = "http"
   http_port_max     = 8181
   http_port_min     = 8181
-  iso_checksum      = "8266e9901220c538b58d643c8ef73af0c85b5bc9f331e53e426a1dba486f5a1d"
-  iso_url           = "https://download.freebsd.org/snapshots/amd64/amd64/ISO-IMAGES/14.0/FreeBSD-14.0-CURRENT-amd64-20220916-c9baa974717-258027-disc1.iso"
+  iso_checksum      = "1eb83d5afeec581181fee90273920424fb4239e6d80a48ffcc1e50ace1c8c218e33b8d2d289560ed6d10a46f882d6df7c2d13d4a43bfd8b48370eb1ba81bb5f6"
+  iso_url           = "https://download.freebsd.org/snapshots/amd64/amd64/ISO-IMAGES/14.0/FreeBSD-14.0-CURRENT-amd64-20220923-00d8a28f19b-258155-disc1.iso"
   memory            = "${var.memory}"
   net_device        = "rtl8139"
   qemuargs          = [
@@ -38,7 +38,7 @@ build {
     scripts         = ["scripts/update.sh","scripts/vagrant.sh","scripts/cleanup.sh","scripts/ansible.sh"]
     }
     post-processor "vagrant" {
-    vagrantfile_template = "vagrantfile .tpl"
+    vagrantfile_template = "vagrantfile.tpl"
   }
   }
 
